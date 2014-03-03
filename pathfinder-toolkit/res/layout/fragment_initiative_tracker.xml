@@ -12,7 +12,16 @@
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:text="@string/initiative_tracker_roll_button" />
-    
+
+    <Button
+        android:id="@+id/buttonCycleInitiative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/initiative_tracker_cycle_button" />
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"

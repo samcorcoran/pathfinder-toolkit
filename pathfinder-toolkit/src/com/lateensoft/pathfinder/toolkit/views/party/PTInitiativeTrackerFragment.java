@@ -42,6 +42,7 @@ public class PTInitiativeTrackerFragment extends PTBasePageFragment implements
 	private boolean m_hasRolled;
 
 	private Button m_rollInitiativeButton;
+	private Button m_cycleInitiativeButton;
 	private ListView m_partyMemberList;
 	
 	private int m_partyMemberSelectedForEdit;
@@ -65,6 +66,9 @@ public class PTInitiativeTrackerFragment extends PTBasePageFragment implements
 
 		m_rollInitiativeButton = (Button) getRootView().findViewById(R.id.buttonRollInitiative);
 		m_rollInitiativeButton.setOnClickListener(this);
+
+		m_cycleInitiativeButton = (Button) getRootView().findViewById(R.id.buttonCycleInitiative);
+		m_cycleInitiativeButton.setOnClickListener(this);
 
 		m_partyMemberList = (ListView) getRootView().findViewById(R.id.listViewEncounterMembers);
 		m_partyMemberList.setOnItemClickListener(this);
@@ -235,7 +239,15 @@ public class PTInitiativeTrackerFragment extends PTBasePageFragment implements
 		PTPartyRollAdapter adapter = new PTPartyRollAdapter(getActivity(),
 				R.layout.party_roll_row, memberNames, memberRollValues, null);
 		m_partyMemberList.setAdapter(adapter);
-		m_rollInitiativeButton.setEnabled(!m_hasRolled);
+		if (m_hasRolled) {
+			m_rollInitiativeButton.setVisibility(View.GONE);
+			m_cycleInitiativeButton.setVisibility(View.VISIBLE);
+		}
+		else {
+			m_rollInitiativeButton.setVisibility(View.VISIBLE);
+			m_cycleInitiativeButton.setVisibility(View.GONE);
+		}
+
         updateTitle();
 	}
 

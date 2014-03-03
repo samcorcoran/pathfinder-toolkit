@@ -742,6 +742,7 @@
     <string name="menu_item_reset_encounter">Reset</string>
     <string name="menu_item_add_encounter_member">Add Encounter Member</string>
     <string name="initiative_tracker_roll_button">Roll for Initiative!</string>
+    <string name="initiative_tracker_cycle_button">Cycle initiative order</string>
     <string name="new_encounter_member_dialog_text">Add a new character or NPC to this encounter?</string>
     <string name="reset_encounter_dialog_title">Reset Encounter</string>
     <string name="reset_encounter_dialog_text">Reset the encounter? Tap \"Use Default\" to completely reset to the current party as it is shown in the Party Manager.</string>
